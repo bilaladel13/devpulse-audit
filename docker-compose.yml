@@ -1,0 +1,20 @@
+services:
+  devpulse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devpulse-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - PING_INTERVAL_MS=10000
+      - DEFAULT_TIMEOUT_MS=5000
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

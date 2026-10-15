@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.gitignore
+*.log
+npm-debug.log*
+.env
+tests
+src/test-*.ts
+README.md

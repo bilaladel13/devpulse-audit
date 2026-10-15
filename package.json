@@ -1,0 +1,39 @@
+{
+  "name": "devpulse-backend",
+  "version": "1.0.0",
+  "description": "DevPulse API Monitoring Dashboard Backend",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "test": "vitest run",
+    "test:ping": "tsx src/test-ping.ts",
+    "test:frontend": "tsx src/test-frontend.ts"
+  },
+  "keywords": [
+    "api-monitoring",
+    "dashboard",
+    "latency",
+    "uptime",
+    "express",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.9",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.2.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^5.0.1"
+  }
+}
